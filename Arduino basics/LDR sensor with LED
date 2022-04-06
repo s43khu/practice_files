@@ -1,0 +1,23 @@
+const int l=2;
+const int r=A0;
+void setup()
+{
+  Serial.begin(13000);
+  pinMode(l,OUTPUT);
+  pinMode(r,INPUT);
+}
+void loop()
+{
+  int x=analogRead(r);
+  Serial.println(x);
+  if(x>200)
+  {
+    digitalWrite(l,HIGH);
+    delay(1000);
+  }
+  else
+  {
+    digitalWrite(l,LOW);
+    delay(1000);
+  }
+}
