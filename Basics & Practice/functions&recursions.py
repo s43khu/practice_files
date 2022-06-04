@@ -43,7 +43,7 @@ x = int(input("enter no."))
 print(factorial(x))
 
 
-# SOLVING FACTORIAL USING RECURSION ( RECURSIONS are basically used in ALGORITHMS)--->
+# SOLVING FACTORIAL USING RECURSION ( RECURSIONS are basically used in ALGORITHMS)----->
 def factorial_rec(d):
     if d == 0 or d == 1:
         return 1
@@ -115,7 +115,7 @@ a.sort()
 print(a)
 
 
-# TO PRINT TABLE OF A GIVEN NO. VIA CALL FUNCTION
+# TO PRINT TABLE OF A GIVEN NO. VIA CALL FUNCTION------------------------------------>
 def multi(val):
     for ri in range(1, 10):
         print(val * ri)
