@@ -1,3 +1,4 @@
+//this is just a trial run file we can execute this file also via loops
 void setup()
 {
   pinMode(13, OUTPUT);
