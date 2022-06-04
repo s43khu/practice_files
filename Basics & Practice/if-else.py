@@ -1,4 +1,4 @@
-# TO FIND THE GREATER NO. AMONG FOUR USER INPUTS
+# TO FIND THE GREATER NO. AMONG FOUR USER INPUTS-------------------->
 a = float(input("enter 1st no."))
 b = float(input("enter 2nd no."))
 c = float(input("enter 3rd no."))
@@ -13,7 +13,7 @@ else:
     print(b, " is greater")
 
 
-# CHECK WHETHER STUDENT PASS OR FAIL, FAIL IF SCORES LESS THAN 40% OVERALL and LESS THAN 33% IN EACH SUBJECT
+# CHECK WHETHER STUDENT PASS OR FAIL, FAIL IF SCORES LESS THAN 40% OVERALL and LESS THAN 33% IN EACH SUBJECT-------------------->
 a = float(input("subject 1:"))
 b = float(input("subject 2:"))
 c = float(input("subject 3:"))
@@ -23,7 +23,7 @@ if (a and b and c) >= 33 and d >= 40:
 else:
     print("fail")
 
-# CHECK USERNAME CONSIST OF MORE THAN 10 CHARACTERS OR FEWER
+# CHECK USERNAME CONSIST OF MORE THAN 10 CHARACTERS OR FEWER------------------------------->
 a = input("enter name:")
 if len(a) < 10:
     print("less than 10")
