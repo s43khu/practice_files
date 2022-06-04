@@ -12,12 +12,12 @@ print(a.keys())
 # PRINTING ALL ITEMS IN DICTIONARY
 print(a.items())
 
-# HINDI DICTIONARY
+# HINDI DICTIONARY-------------------------------------------------------------------------------------------------->
 a = {"seb": "apple", "angur": "grape", "amrud": "guava", "tarbuj": "watermelon", "anar": "pomegranate"}
 i = input("translate=")
 print(a[i])
 
-# INPUT NAME AND YOUR FAV LANG
+# INPUT NAME AND YOUR FAV LANG------------------------------------------------------------------------------------->
 x = {}
 a = input("name:")
 z = input("fav lang:")
