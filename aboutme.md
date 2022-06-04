@@ -1,4 +1,4 @@
-- 👋 Hi, I’m shekhu.
+- 👋 Hi, I’m shekhu(my nickname).
 - 👀 I’m interested in Embedded.
 - 🌱 I’m currently learning IoT.
 - 💞️ I’m looking to collaborate on Automation services.
