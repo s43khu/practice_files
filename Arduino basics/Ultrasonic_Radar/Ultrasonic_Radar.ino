@@ -13,6 +13,7 @@ int cd(){
   distance=0.017*t;
   return distance;
 }
+// BELOW CODE IS ABOUT SERVO
 Servo my;
 void setup()
 {
