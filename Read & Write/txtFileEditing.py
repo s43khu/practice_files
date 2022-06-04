@@ -1,4 +1,4 @@
-# TO OVERWRITE WRITTEN TEXT AND READ TEXT FILE------------------------------------------------------------------------->
+# TO OVERWRITE WRITTEN TEXT AND READ TEXT FILE(overwrite w and we can also use append a(by which our old values remain as they were))------------->
 n = input("enter you want to overwrite:")
 f = open("test.txt", "w")
 f.write(n)
