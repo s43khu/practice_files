@@ -44,3 +44,4 @@ void plotTriangleWave() {
       Serial.println(i);
    }
 }
+// if comfortable with PI use it otherwise 22/7 OR 3.1415926
