@@ -1,0 +1,28 @@
+<script>
+    var cat=["cat1.jpg","cat2.jpg","cat3.jpg","cat4.jpg","cat5.jpg"];
+    var dog=["dog1.jpg","dog2.jpg","dog3.jpg","dog4.jpg","dog5.jpg"];
+    function showc()
+    {
+       for(i=0;i<5;i++)
+           {
+               
+               document.images[i].src=cat[i];
+           }
+    }
+    function showd()
+    {
+       for(i=0;i<5;i++)
+           {
+               
+               document.images[i].src=dog[i];
+           }
+    }
+   </script>
+   
+   <input type="button" value="cat" onclick="showc()">
+   <input type="button" value="dog" onclick="showd()">
+   <img src="" height="350" width="300">
+   <img src="" height="350" width="300">
+   <img src="" height="350" width="300">
+   <img src="" height="350" width="300">
+   <img src="" height="350" width="300">

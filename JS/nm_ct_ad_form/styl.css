@@ -1,0 +1,26 @@
+body{
+    background-color: white;
+    border: 2px solid blue;
+    margin: auto;
+    width: 7cm;
+    height: 10cm;
+}
+main{
+   padding: 1em 2em;
+}
+label{
+    float: left;
+    width: 10em;
+    margin-right: .5em;
+    
+}
+input{
+    margin-bottom: 2em;
+}
+#check{
+    width: 10em;
+}
+#demon{
+    padding:1em 2em;
+    color: red;
+}

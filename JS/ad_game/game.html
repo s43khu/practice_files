@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>GAME</title>
+</head>
+<link rel="stylesheet" href="gam.css">
+<body>
+<script>
+    
+    var a=parseInt(Math.random()*9)+1;
+    var s=0;
+    var chk=[0,0,0,0,0,0,0,0,0];
+   
+    var hs=parseInt(localStorage.setItem("hscore",0));
+    var peng=["penguin_1.png","penguin_2.png","penguin_3.png","penguin_4.png","penguin_5.png","penguin_6.png","penguin_7.png","penguin_8.png"]
+    var mo=["mound_1.png","mound_2.png","mound_3.png","mound_4.png","mound_5.png","mound_6.png","mound_7.png","mound_8.png","mound_9.png"]
+    function tim()
+    {
+        for(i=0;i<=8;i++)
+                {
+                document.images[i+1].src=mo[i];
+                }
+                s=0;
+                demon.innerHTML=s; 
+                demon2.innerHTML=parseInt(localStorage.getItem("hscore"));
+                a=parseInt(Math.random()*9)+1;
+                chk=[0,0,0,0,0,0,0,0];
+    }
+    function on(k)
+    {
+        if((k.id)!=a)
+        {
+            if(chk[k.id]!=1)
+            {
+                s++;
+                k.src=peng[parseInt(Math.random()*8)]   
+                demon.innerHTML=s;
+                chk[k.id]=1;  
+            }
+            else{
+                alert("single click allowed!");
+            }
+        }
+        else
+        {
+                    document.images[a].src="yeti.png";
+                   if(parseInt(localStorage.getItem("hscore"))<s)
+                   {
+                    localStorage.setItem("hscore",s);
+                   }
+                    setTimeout("tim()",500);         
+        }
+        
+    }
+   
+</script>
+<body>
+    <img id="title" src="penguin_title.png">
+    <div class="con">
+    <button id="new_game" onclick="tim()">New Game</button>
+    <div class="score">
+SCORE=>&nbsp;<div id="demon">0</div></div><div class="hscore">
+HI.SCORE=>&nbsp;<div id="demon2"></div></div></div>
+   <div id="mo1"><div class="mounds1">
+    <img src="mound_1.png" id="1" onclick="on(this)"></div><div class="mounds2">
+    <img src="mound_2.png" id="2" onclick="on(this)"></div><div class="mounds3">
+    <img src="mound_3.png" id="3" onclick="on(this)"></div></div>
+    <div id="mo2"><div class="mounds4">
+    <img src="mound_4.png" id="4" onclick="on(this)"></div><div class="mounds5">
+    <img src="mound_5.png" id="5" onclick="on(this)"></div><div class="mounds6">
+    <img src="mound_6.png" id="6" onclick="on(this)"></div></div>
+    <div id="mo3"><div class="mounds7">
+    <img src="mound_7.png" id="7" onclick="on(this)"></div><div class="mounds8">
+    <img src="mound_8.png" id="8" onclick="on(this)"></div><div class="mounds9">
+    <img src="mound_9.png" id="9" onclick="on(this)"></div></div>
+</body>
+</html>

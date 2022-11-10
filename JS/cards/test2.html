@@ -1,0 +1,78 @@
+<script>
+//---------->these are global declare variables
+    var b=["a.jpg","2.jpg","3.jpg","4.jpg","5.jpg","6.jpg","7.jpg","8.jpg","9.jpg","10.jpg","j.jpg","q.jpg","k.jpg"];
+    var x=0;
+
+//---------->function to generate a single random card    
+    function ran1()
+    { 
+         document.images[x].src="";
+        var a=parseInt(Math.random()*13);
+        
+        x=a;
+        document.images[a].src=b[a];
+    }
+
+
+//---------->function to generate all random cards
+    function ranall()
+    {
+        for(i=0;i<13;i++)
+        {
+            var a=parseInt(Math.random()*13);
+            document.images[i].src=b[a];
+        }
+    }
+
+
+//----------->function to generate cards in reverse order    
+    function revc()
+    {
+        for(i=12;i>=0;i--)
+        {
+            document.images[i].src=b[12-i];
+        }
+
+    }
+//----------->function to genrate random cards (********WITHOUT-REPEATS**********)     
+    function tough1()
+    {
+        var c=[0,0,0,0,0,0,0,0,0,0,0,0,0];  //------>this array is going to store our random variables as 1 value given in 49th LINE.
+     
+        for(i=0;i<13;i++)
+        {
+            while(1)
+            {
+                var a=parseInt(Math.random()*13);    
+                if(c[a]==0)                   //------>checking if the slot is filled for random variable
+                {
+                    c[a]=1;
+                    //alert(a);
+                    document.images[i].src=b[a];
+                    break;
+                }
+            }
+        }
+    }
+    
+</script>
+<body bgcolor="red">
+<img src="" width="100" height="150">
+<img src="" width="100" height="150">
+<img src="" width="100" height="150">
+<img src="" width="100" height="150">
+<img src="" width="100" height="150">
+<img src="" width="100" height="150">
+<img src="" width="100" height="150">
+<img src="" width="100" height="150">
+<img src="" width="100" height="150">
+<img src="" width="100" height="150">
+<img src="" width="100" height="150">
+<img src="" width="100" height="150">
+<img src="" width="100" height="150"><br>
+
+<input type="button" onclick="ran1()" value="chngcrd" >
+<input type="button" onclick="ranall()" value="randall">
+<input type="button" onclick="revc()" value="revall">
+<input type="button" onclick="tough1()" value="tryit">
+</body>

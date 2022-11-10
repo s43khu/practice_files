@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <script src="JQ.js"></script>
+   <script>
+    $(document).ready(function(){
+        $("#b1").click(function(){
+            alert("text:"+$("#test").text());
+            $("#test").hide();
+        });
+        
+        $("#b2").click(function(){
+            alert("HTML:"+$("#test").html());
+        });
+    });
+   </script>
+    <title>Document</title>
+</head>
+<body>
+    <p id="test">this is a <b>bold</b> text in paragraph.</p>
+    <button id="b1">show text</button>
+    <button id="b2">show html</button>
+    
+</body>
+</html>

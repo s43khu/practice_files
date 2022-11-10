@@ -1,0 +1,16 @@
+<script type="text/javascript" src="data.json"></script>
+<script>
+    var mydata=JSON.parse(data);    //--------->its the necessary step to use JSON file in an array
+    var sal=0;
+    function show()
+    {
+        for (i in mydata)
+        {
+            document.write(mydata[i].id+":"+mydata[i].name+" salary:"+mydata[i].salary+"<br>");
+            sal=parseInt(mydata[i].salary)+sal;
+        }
+        document.write("<br>total paid salary:"+sal);
+
+    }
+</script>
+<input type="button" value="show" onclick="show()">

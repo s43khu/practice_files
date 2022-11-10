@@ -1,0 +1,22 @@
+<script>
+    function first()
+    {
+        var color=new Object()
+        color.red=200;
+        color.green=400;
+        color.blue=700;
+        document.getElementById("lol").innerHTML=color.red +" is for red<br>" + color.green +" is for green<br>" + color.blue +" is for blue<br>";
+    }
+    function second()
+    {
+        var product={
+            id:652156,
+            name:"Table Fan",
+            price:750,
+        }
+        document.getElementById("lol").innerHTML="product ID:"+product.id+"<br>product Name:"+product.name+"<br>product Price:"+product.price;
+    }
+</script>
+<input type="button" value="first" onclick="first()">
+<input type="button" value="second" onclick="second()">
+<h1><div id="lol">see here</div></h1>

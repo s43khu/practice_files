@@ -1,0 +1,21 @@
+<script>
+    function val()
+    {
+        if(t1.value.trim()=="")     //-------->Allows you to trim spaces
+        {
+            alert("username cannot be blank")
+        }
+        else if(t1.value.length<5)      //--------->value length mudt be more than 4
+        {
+          alert("userename must have 5 characters")    
+         }
+         else if(! isNaN(t1.value))       //---------->To set only alphabets
+         {
+            alert("must be alphabets")
+         }
+    }    
+
+    
+</script>
+username<input type="text" name="t1" id="t1">
+<input type="button" onclick="val()"  value="validate">

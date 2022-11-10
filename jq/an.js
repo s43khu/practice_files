@@ -1,0 +1,45 @@
+$(document).ready(function(){
+    var c=0;
+    var s=0;
+    $(".first").click(function(){
+        $(".anim").animate({height:"8cm"})
+    });
+    $(".second").click(function(){
+        $(".anim").animate({height:"5cm"})
+    });
+    $(".third").click(function(){
+        $(".anim").animate({width:"8cm"})
+    });
+    $(".sixth").click(function(){
+        $(".anim").animate({width:"5cm"})
+    });
+    $(".fourth").click(function(){
+        if(c%2==0){
+        $(".anim").animate({width:"8cm",height:"8cm",opacity:0.5})        
+        }
+        else{
+            $(".anim").animate({width:"5cm",height:"5cm",opacity:2})
+        }
+        c++;
+    });
+    $(".seven").click(function(){
+        if(s%2==0){
+        $(".anim").fadeOut(2000);
+        $(".seven").html("fadein");}
+        else
+        {
+        $(".anim").fadeIn(2000);
+        $(".seven").html("fadeout");}
+        s++;
+    });
+    $(".fifth").click(function(){
+        $(".anim").animate({width:"10cm"});
+        $(".anim").animate({width:"5cm",
+        screenLeft:"5cm"});
+        $(".anim").animate({height:"10cm"});
+        $(".anim").animate({width:"5cm"})
+        $(".anim").animate({height:"5cm"})
+        $(".anim").before();
+        $(".anim").after();
+    });
+});

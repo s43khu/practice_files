@@ -1,0 +1,23 @@
+<script>
+    emp=[]
+    function counts()      //---------->this is to store data in local storage in JSON format.
+    {
+        o=new Object();
+        o.id=e1.value;
+        o.name=e2.value;
+        o.desig=e3.value;
+        o.sal=e4.value;
+        e1.value="";
+        e2.value="";
+        e3.value="";
+        e4.value="";
+        emp.push(o);
+        localStorage.setItem("employee",JSON.stringify(emp));   
+    }
+</script>
+emp id:<input type="text" name="e1" id="e1"><br>
+emp name:<input type="text" name="e2" id="e2"><br>
+emp desig:<input type="text" name="e3" id="e3"><br>
+emp sal:<input type="text" name="e4" id="e4"><br>
+<input type="button" value="submit" onclick="counts()"><br>
+<a href="employers.html">check-here</a>

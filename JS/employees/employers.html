@@ -1,0 +1,63 @@
+<style>
+    table,th,td{
+        border:2px solid blueviolet;
+        border-collapse: collapse;
+        padding: 4px;
+        margin: 5px;
+        text-align: center;
+    }
+    body{
+        border: 2px;
+        padding: 55px;
+        margin: 15px;
+    }
+</style>
+<script>
+    var o=JSON.parse(localStorage.getItem("employee"));
+    var tsal=0;
+    var largest=0
+    
+    function show()               //----------------------->this function  is going to print local storage values in table
+    {
+        
+        var s="<table width=100% border=1px><th>employeeID<th>employee-Name<th>employee-Desig<th>employee-Salary";
+            for(x in o)
+            {
+                s=s+"<tr><td>"+o[x].id+"<td>"+o[x].name+"<td>"+o[x].desig+"<td>"+o[x].sal;
+            }
+            s=s+"</table>";
+            demon.innerHTML=s;
+    }
+    function gross()    //------------------------>this function sums up the salary 
+    {
+        for(x in o)
+        {
+           tsal=parseInt(o[x].sal)+tsal;
+        }
+        demon2.innerHTML="gross salary:"+tsal;
+    }
+    function comp()        //----------------------->this function is to find the highest salary of an employee
+    {
+        salary=[]  
+        
+        for(x in o)
+        {
+          salary.push(parseInt(o[x].sal))
+        }
+        for(x=0;x<salary.length;x++)
+        {
+            if(salary[x]>largest)
+            {
+                largest=salary[x];
+                v=x;
+            }
+        }
+        demon3.innerHTML="highest salary:"+largest+" Employee Name: "+o[v].name;
+    }
+</script>
+<input type="button" onclick="show()" value="show-details">
+<input type="button" onclick="gross()" value="sum">
+<input type="button" onclick="comp()" value="high-sal">
+<div id="demon"></div>
+<div id="demon2"></div>
+<div id="demon3"></div>

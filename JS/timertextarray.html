@@ -1,0 +1,17 @@
+<script>
+    var p=["red","green","blue","yellow","pink"];
+    var i=0;
+    function show()
+    {
+        ab.innerHTML="<h1>"+p[i];
+            i++;
+        if(i>4)
+        { 
+            i=0;
+        }
+        setTimeout("show()",1000);   //***NOTE***:keep this out of condition otherwise it only display single text(color) from array.
+        
+    }
+</script>
+<div id="ab">**</div>
+<input type="button" value="doit" onclick="show()">

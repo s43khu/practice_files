@@ -1,0 +1,19 @@
+<script>
+    function val()
+    {
+        var a=t1.value;
+        var b=a.charCodeAt(0);
+        if(b>=97 && b<=122)   //---------->ASCII values
+        {
+            alert("must be in caps");
+        }
+        if(a.indexOf("$")==-1)
+        {
+            alert("must have $ symbol")
+        }
+    
+    }
+
+</script>
+username<input type="text" name="t1" id="t1">
+<input type="button"  onclick="val()" value="validate">

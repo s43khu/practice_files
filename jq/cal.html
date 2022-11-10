@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="JQ.js"></script>
+    <script>
+        $(document).ready(function(){
+            $("#b1").click(function(){
+                $("#t3").val(parseInt($("#t1").val())+parseInt($("#t2").val()));
+            });
+            $("#b2").click(function(){
+                $("#t3").val(parseInt($("#t1").val())*parseInt($("#t2").val()));
+            });
+            $("#b3").click(function(){
+                $("#t3").val(parseInt($("#t1").val())-parseInt($("#t2").val()));
+            });
+            $("#b4").click(function(){
+                $("#t3").val(parseInt($("#t1").val())/parseInt($("#t2").val()));
+            });
+        });
+    </script>
+   
+</head>
+<body>
+    x=<input type="text" id="t1">
+    y=<input type="text" id="t2">
+    z=<input type="text" id="t3" disabled>
+    <input type="button" id="b1" value="sum">
+    <input type="button" id="b2" value="multiply">
+    <input type="button" id="b3" value="subtract">
+    <input type="button" id="b4" value="divide">
+    
+</body>
+</html>

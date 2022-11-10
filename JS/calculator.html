@@ -1,0 +1,41 @@
+<script language="javascript">
+function add(a)
+{
+ if(t1.value.substring(t1.valuelength-1)!=a)
+     t1.value=t1.value+a
+}
+
+function fu()
+{
+  alert("wrong")
+  if(t1.value.charCodeAt(t1.valuelength-1)=='+' || t1.value.charCodeAt(t1.valuelength)=='-' || t1.value.charCodeAt(t1.valuelength)=='*' || t1.value.charCodeAt(t1.valuelength)=='/')
+  {
+    alert("wwwwww")
+  }
+}
+function cal()
+{
+  fu();
+ t1.value=eval(t1.value)
+}
+</script>
+
+
+<input type="text" id="t1">
+
+<input type="button" value="1" onclick="add(1)">
+<input type="button" value="2" onclick="add(2)">
+<input type="button" value="3" onclick="add(3)">
+<input type="button" value="4" onclick="add(4)">
+<input type="button" value="5" onclick="add(5)">
+<input type="button" value="6" onclick="add(6)">
+<input type="button" value="7" onclick="add(7)">
+<input type="button" value="8" onclick="add(8)">
+<input type="button" value="9" onclick="add(9)">
+<input type="button" value="0" onclick="add(0)">
+<input type="button" value="+" onclick="add('+')">
+<input type="button" value="-" onclick="add('-')">
+<input type="button" value="*" onclick="add('*')">
+<input type="button" value="/" onclick="add('/')">
+<input type="button" value="=" onclick="cal()">
+<input type="button" value="clr" onclick="clr()">

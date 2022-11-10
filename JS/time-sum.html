@@ -1,0 +1,46 @@
+<script>
+    var d=0;
+    var timem=0;
+    var times=0;
+    var timeh=0;
+    var time1={
+    hh:23,
+    mm:13,
+    ss:24,
+     }
+
+    var time2={
+    hh:24,
+    mm:10,
+    ss:40,
+    }
+  
+    function add()
+    {
+         times=times+parseInt(time1.ss+time2.ss);
+    if(times>60)
+    {
+        a=times-60;
+        timem++;
+        times=a;
+    }
+     timem=timem+parseInt(time1.mm+time2.mm);
+    if(timem>60)
+    {
+        b=timem-60;
+        timeh++;
+        timem=b;
+    }
+     timeh=timeh+parseInt(time1.hh+time2.hh);
+    if(timeh>24)
+    {
+        c=timeh-24;
+        d++;
+        timeh=c;
+    }
+  
+       document.write("day:"+d+"//"+timeh+":"+timem+":"+times);
+
+    }
+</script>
+<input type="button" value="time-sum" onclick="add()">

@@ -1,0 +1,99 @@
+body{
+    background-color: rgb(179, 240, 240);
+}
+#title{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 35%;
+}
+.con{
+    display: block;
+    margin-top: 2cm;
+}
+.score{
+    color: green;
+    background-color: rgb(147, 244, 173);
+    border: 2px solid rgb(122, 182, 207);
+    border-radius: 5px;
+    display: inline-block;
+    margin-left: 200px;
+    width: 3cm;
+}
+#demon{
+    display: inline-block;
+    text-align: center;
+}
+#demon2{
+    display: inline-block;
+    text-align: center;
+}
+.hscore{
+    color: red;
+    background-color: rgb(236, 181, 164);
+    border: 2px solid rgb(122, 182, 207);
+    border-radius: 5px;
+    display: inline-block;
+    margin-left: 200px;
+    width: 3cm;
+}
+#new_game{
+    background-color: rgb(179, 179, 230);
+    display: inline-block;
+    margin-left: 550px;
+    height: 35px;
+    width: 100px;
+    border: 1.5px solid rgb(122, 182, 207);
+    border-radius: 16px;
+    cursor:pointer;
+}
+#mo1{
+    margin-left: 32%;
+    display:inline-block;
+    text-align: center; 
+}
+#mo2{
+    display: inline-block;
+    text-align: center; 
+}
+#mo3{
+    display: inline-block;
+    text-align: center; 
+}
+
+.mounds1:hover{
+    background: url(mound_1_hover.png);
+    
+}
+.mounds2:hover{
+    background: url(mound_2_hover.png);
+}
+.mounds3:hover{
+    background: url(mound_3_hover.png);
+}
+.mounds4:hover{
+    background: url(mound_4_hover.png);
+}
+.mounds5:hover{
+    background: url(mound_5_hover.png);
+}
+.mounds6:hover{
+    background: url(mound_6_hover.png);
+}
+.mounds7:hover{
+    background: url(mound_7_hover.png);
+}
+.mounds8:hover{
+    background: url(mound_8_hover.png);
+}
+.mounds9:hover{
+    background: url(mound_9_hover.png);
+}
+#new_game:hover{
+    
+    background-color: rgb(123, 123, 237);
+}
+#new_game:active{
+    background-color: rgb(123, 123, 237);
+    transform: scale(0.9);
+}

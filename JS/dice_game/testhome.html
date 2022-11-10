@@ -1,0 +1,158 @@
+<script>
+    var a=["1D.jpg","2D.jpg","3D.jpg","4D.jpg","5D.jpg","6D.jpg"];
+    var z=0;
+    var c=0;
+    var s=0;
+    var k=0;
+      
+  
+    function roll()
+    {    
+            if(c<5)
+            {
+                c++;
+                nor.innerHTML=c;
+                var b=parseInt(Math.random()*6);
+                //alert(b);
+                document.getElementById("dice").src=a[b];
+                if(b==0)
+                {
+                    z=z+1;
+                }
+                if(b==1)
+                {
+                    z=z+2;
+                }
+                if(b==2)
+                {
+                    z=z+3;
+                }
+                if(b==3)
+                {
+                    z=z+4;
+                }
+                if(b==4)
+                {
+                    z=z+5;
+                }
+                if(b==5)
+                {
+                    z=z+6;
+                }
+                
+                score.innerHTML=z;
+            }
+            else
+            {
+                alert("only 5 attempts");
+            }
+            if(c==5 & s==5)
+            {
+                if(k>z)
+                {
+                    document.getElementById("win").innerHTML="P2 IS THE WINNER!";
+                }
+                if(z>k)             
+                {
+                    document.getElementById("win").innerHTML="P1 IS THE WINNER!";
+                }
+                if(z==k){
+                    document.getElementById("win").innerHTML="DRAW!";
+                }
+            }
+    }
+    function roll2()
+    {     
+            if(s<5)
+            {
+                s++;
+                or.innerHTML=s;
+                var d=parseInt(Math.random()*6);
+                //alert(b);
+                document.getElementById("dice2").src=a[d];
+                if(d==0)
+                {
+                    k=k+1;
+                }
+                if(d==1)
+                {
+                    k=k+2;
+                }
+                if(d==2)
+                {
+                    k=k+3;
+                }
+                if(d==3)
+                {
+                    k=k+4;
+                }
+                if(d==4)
+                {
+                    k=k+5;
+                }
+                if(d==5)
+                {
+                    k=k+6;
+                }
+                
+                score2.innerHTML=k;
+            }
+            else
+            {
+                alert("only 5 attempts");
+            }
+            if(c==5 & s==5)
+            {
+                if(k>z)
+                {
+                    document.getElementById("win").innerHTML="P2 IS THE WINNER!";
+                }
+                if(z>k)             
+                {
+                    document.getElementById("win").innerHTML="P1 IS THE WINNER!";
+                }
+                if(z==k){
+                    document.getElementById("win").innerHTML="DRAW!";
+                }
+            }
+            
+    }
+
+
+    
+            
+    function reset()
+    { if(c==5 && s==5)
+        {
+            z=0;
+            score.innerHTML=z;
+            c=0;
+            nor.innerHTML=c;
+            k=0;
+            score2.innerHTML=k;
+            s=0;
+            or.innerHTML=s;
+            document.getElementById("win").innerHTML="********";
+        }
+        else
+        {
+            alert("complete the last turns first!")
+        }
+    }
+
+</script>
+<body bgcolor="black">
+   <font color="white">P1 SCORE::<span id="score">0</span><br>PLAYER 1:&nbsp;&nbsp;&nbsp;<span id="nor">0</span> of 5 try.</font>
+<img src="" width="180" height="180" id="dice">
+<img src="" width="180" height="180" id="dice2">
+<font color="white">P2 SCORE::<span id="score2">0</span><br>PLAYER 2:&nbsp;&nbsp;&nbsp;<span id="or">0</span> of 5 try.<h1><div id="win">********
+</div></h1></font>
+
+
+
+
+<input type="button" onclick="roll()" value="p1">
+<input type="button" onclick="roll2()" value="p2">
+
+<input type="button" onclick="reset()" value="reset">
+</body>

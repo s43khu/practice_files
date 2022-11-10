@@ -1,0 +1,45 @@
+<script>
+    function user()
+    {
+        var a=p1.value;
+        var b=a.charCodeAt(0);
+        var c=u1.value;
+        var d=cp1.value;
+        var e=m1.value;
+        if(c.length<4)
+        {
+            alert("username must me more than 4 character")
+        }
+        if(a.indexOf("$")||a.indexOdf("#")==-1)
+        {
+            alert("password must contain $/# symbol")
+        }
+        if(a.length<8)
+        {
+            alert("password must of more than 8")
+        }
+        if(a.indexOf("1")==-1)
+        {
+            alert("must have one numeric character")
+        }
+        if(a!=d)
+        {
+            alert("recheck password")
+        }
+        if(isNaN(e))
+        {
+            alert("must be numeric")
+        }
+        if(e.length!=10)
+        {
+            alert("must be 10 digits")
+        }
+        
+    }
+
+</script>
+ username<input type="text" id="u1" name="u1"><br>
+ password<input type="password" id="p1" name="p1"><br>
+ confirm password<input type="password" id="cp1" name="cp1"><br>
+ phone no.<input type="text" id="m1" name="m1"><br>
+ <input type="button" onclick="user()" value="submit">

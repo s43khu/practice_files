@@ -1,0 +1,22 @@
+body{
+    background-color: white;
+    border: 2px solid blue;
+    margin: auto;
+    width: 7cm;
+    height: 10cm;
+}
+main{
+   padding: 1em 2em;
+}
+h1{
+    color: red;
+}
+label{
+    float: left;
+    width: 10em;
+    margin-right: .5em;
+    
+}
+input{
+    margin-bottom: 2em;
+}

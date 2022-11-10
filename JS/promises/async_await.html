@@ -1,0 +1,22 @@
+<h1 id="demo"></h1>
+<script>
+    function show(value)
+    {
+        document.getElementById("demo").innerHTML=value;
+    }
+    async function mydisplay()
+    {
+        let mypromise=new Promise(function(resolve,reject)
+        {
+            reject("error from me!");
+        });
+        console.log("hi there!");
+        await mypromise.then(
+            function(value){show(value);},
+            function(error){show(error);console.log("error overcome!")}
+        );
+        console.log("promise done!");
+        alert("ok");
+    }
+    mydisplay();
+</script>

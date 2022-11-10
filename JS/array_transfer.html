@@ -1,0 +1,20 @@
+<script>
+    function show()
+    {
+        var p=[5,7,9,11,12,,6,4];
+        var m=[15,17,19,31,42,6,14];
+        var h=[];
+        for(i=0;i<7;i++)
+        {
+            h.push(p.pop());
+        }
+        for(i=0;i<7;i++)
+        {
+            h.push(m.pop());
+        }
+        document.write(h.toString());
+        document.write("<br>");
+        document.write(h.sort().toString());     //------> here sorting is done in dictionary manner. ex:1,11,2,25,35,..etc
+    }
+</script>
+<input type="button" onclick="show()" value="show">
