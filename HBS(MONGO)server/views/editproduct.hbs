@@ -1,0 +1,8 @@
+<form action="/update" method="post">
+{{#each results}}
+Product Name <input type="text" name="name" value={{product_name}}>
+Product Price <input type="text" name="price" value={{product_price}}>
+<input type="hidden" value={{product_id}} name="id">
+<input type="submit">
+{{/each}}
+</form>

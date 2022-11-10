@@ -1,0 +1,8 @@
+<form action="/update" method="post">
+    <% results.forEach(function(name){%>
+        Product name<input type="text" name="name" value=<%=name.product_name%>>
+        Product price<input type="text" name="price" value=<%=name.product_price%>>
+        <input type="hidden" name="id" value=<%=name.product_id%>>
+        <input type="submit">   
+    <%})%>
+</form>

@@ -1,0 +1,36 @@
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+<a href="/api/add">Add New Employee</a>
+<hr>
+
+
+<table class="table table-hover" >
+      <thead>
+        <tr class="warning">
+          <th>ID</th>
+          <th>Name</th>
+          <th>Age</th>
+          <th>Salary</th>
+          <th>Action</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% results.forEach(function(name) { %>
+        <tr class="table-info">
+          <td><%= name.id %></td>
+          <td><%= name.name %></td>
+          <td><%= name.age %></td>
+          <td><%= name.salary %></td>
+
+<td> <a href ="http://127.0.0.1:8888/employeesdelete/<%= name.id %>" class="btn btn-danger">Delete</a>
+ <a href ="http://127.0.0.1:8888/api/employeesfind/<%= name.id %>" class="btn btn-success">Edit</a>
+</td>
+
+        </tr>
+       <% }); %>
+      </tbody>
+    </table>
+  
+

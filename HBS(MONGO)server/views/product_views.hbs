@@ -1,0 +1,24 @@
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<a href="http://localhost:5050/productadd">add new product</a>
+<hr>
+<table class="table table-hover">
+    <thread>
+        <tr class="warning">
+            <th>Product ID</th>
+            <th>Product NAme</th>
+            <th>Price</th>
+        </tr>
+    </thread>
+    <tbody>
+        {{#each results}}
+        <tr class="table-info">
+            <td>{{product_id}}</td>
+            <td>{{product_name}}</td>
+            <td>{{product_price}}</td>
+            <td><a href="http://localhost:5050/productdelete/{{product_id}}"class="btn btn-danger">Delete</a>
+            <a href="http://localhost:5050/productedit/{{product_id}}"class="btn btn-success">Edit</a></td>
+        </tr>
+    {{/each}}
+    </tbody>
+    </table>

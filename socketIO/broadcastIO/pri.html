@@ -1,0 +1,32 @@
+<script src="/socket.io/socket.io.js"></script>
+<script>
+    var socket=io();
+    var user="";
+    socket.on('newmsg', function(data) {
+   if(data.receiver==user)
+    document.getElementById('p').innerHTML +=data.user+":"+  data.message + '<br>';
+         });
+    socket.on('print',(data)=>{
+        document.getElementById('send').innerHTML+="<option>"+data.users+"</option>";
+    });
+    function sndmsg()
+  {
+  var msg = document.getElementById('t1').value;
+   var rec=document.getElementById("send").tabIndex;
+   socket.emit('msg1', {message: msg, user:user,receiver:rec}); 
+       
+  }
+        function nickname(){
+            user = prompt('Enter your Username');
+socket.emit('register',user);
+        }
+   
+</script>
+enter msg::<input type="text" name="t1" id="t1">
+<input type="button" onclick="sndmsg()" value="msgsend">
+<input type="button" onclick="nickname()" value="username">
+send to::<select id="send">
+
+</select>
+<hr>
+<div id="p"></div>

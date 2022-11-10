@@ -1,0 +1,42 @@
+<script src = "/socket.io/socket.io.js"></script>
+   
+   <script>
+   var user = "ramu";
+   var socket = io();
+   socket.on('newmsg', function(data) {
+    document.getElementById('p').innerHTML +=data.user+":"+  data.message + '<br>';
+         });
+   socket.on('newmsg1', function(data) {
+   if(data.receiver==user)
+    document.getElementById('p').innerHTML +=data.user+":"+  data.message + '<br>';
+         });
+  function sendmsg()
+  {
+   var msg = document.getElementById('t1').value;
+        
+   socket.emit('msg', {message: msg, user:user});
+       
+  }
+
+function sendmsg1()
+  {
+  var msg = document.getElementById('t1').value;
+   var rec = document.getElementById('t2').value;
+   socket.emit('msg1', {message: msg, user:user,receiver:rec}); 
+       
+  }
+ function nickname()
+ {
+  user=prompt("Enter nickname");
+ }
+</script>
+ 
+  Enter message <input type=text name=t1 id=t1>
+  Enter Name who will recieve message <input type=text name=t2 id=t2>
+ <input type=button value="send to all" onclick="sendmsg()">
+<input type=button value="send to specific" onclick="sendmsg1()">
+
+<input type=button value="nickname" onclick="nickname()">
+<hr>
+<div id="p"> </div>
+</html>

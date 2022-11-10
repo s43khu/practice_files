@@ -1,0 +1,21 @@
+<script>
+    
+function show(){
+    if(password.value==cp.value){
+        document.getElementById("btn").type="submit";
+    }
+    
+    else{
+        alert("password doesnt match");
+
+    }
+  }
+</script>
+
+<form action="/signup" method="post" id="h">
+    username<input type="text" name="username">
+    password<input type="password" name="password" id="password">
+    confirm password<input type="password" name="cpassword" id="cp">
+    <input type="button" onclick="show()" id="btn" value="submit">
+    
+</form>

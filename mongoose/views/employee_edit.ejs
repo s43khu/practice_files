@@ -1,0 +1,10 @@
+
+<form action="/api/employeesupdate" method="post">
+         <% results.forEach(function(name) { %>
+Id <input type="text" name="id" value=<%= name.id %> >
+Name <input type="text" name="name" value=<%= name.name %> >
+Salary <input type="text" name="price" value=<%= name.salary %>>
+age <input type="text" name="age" value=<%= name.age %>>
+   <input type="submit" >
+          <% }); %>  
+</form>

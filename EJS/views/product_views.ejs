@@ -1,0 +1,25 @@
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+<a href="http://localhost:4040/productadd">add new product</a>
+
+<hr>
+<table class="table table-hover">
+    <thread>
+        <tr class="warning">
+            <th>product ID</th>
+            <th>product NAME</th>
+            <th>PRICE</th>
+        </tr>
+    </thread>
+<tbody>
+    <% results.forEach(function(name){%>
+    <tr class="table-info">
+        <td><img src="assets/<%=name.product_image%>"width="50" height="50"></td>
+        <td><%=name.product_id %></td>
+        <td><%=name.product_name %></td>
+        <td><%=name.product_price %></td>
+        <td class="btn btn-danger"><a href="http://localhost:4040/productdelete/<%=name.product_id%>">delete</a></td>
+        <td><a href="http://localhost:4040/productedit/<%=name.product_id%>">edit</a></td>
+    </tr>
+    <%});%>
+</tbody>
+</table>

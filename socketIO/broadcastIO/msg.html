@@ -1,0 +1,22 @@
+<script src="/socket.io/socket.io.js"></script>
+<script>
+    var socket=io();
+    var user="user";
+    socket.on('newmsg',(data)=>{
+        document.getElementById('p').innerHTML+=data.user+":"+data.msg+"<br>";
+          });
+        function sndmsg()
+        {
+            var msg=document.getElementById("t1").value;
+            socket.emit('msg',{msg:msg,user:user});
+        }
+        function nickname(){
+            user=prompt("enter nickname::");
+        }
+   
+</script>
+enter msg::<input type="text" name="t1" id="t1">
+<input type="button" onclick="sndmsg()" value="msgsend">
+<input type="button" onclick="nickname()" value="username">
+<hr>
+<div id="p"></div>
