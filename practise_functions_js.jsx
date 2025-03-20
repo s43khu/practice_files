@@ -1,6 +1,10 @@
 
 //==================================== GET THE UNIQUe COMBINATIONS FROM THE WORLIST =====================================//
 
+// There are two methods for getting unique cobination we can use nPr and nCr for now we are using nPr as the outcomes not to be unique by words but by the arrangement they can be different
+// In nCr method outcomes will be unqiue even with the combinations
+// Permutations method
+
 function generateUniqueCombinations(wordList, wordsPerCombination, outcomesNeeded) {
     const generatedTexts = new Set();
 
